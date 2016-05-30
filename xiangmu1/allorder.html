@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/graderecord.css">
+	<title>全部订单</title>
+</head>
+<body>
+	<header><a href=""><img src="images/title_jiantou_left.png" alt="<">返回首页</a></header>
+	<div class="orderlist_tab">
+		<div class="active" data-content="wait">待发货</div>
+		<div data-content="already">已发货</div>
+		<div data-content="finish">已完成</div>
+	</div>
+	<div class="orderlist_content">
+		<div id="wait" class="active">
+			<!--如果没有订单-->
+			<div id="none_order">
+				<div><img src="images/none_order.png" alt=""></div>
+				<div><p>您的订单还是空的哦~</p></div>
+				<div><input type="button" value="去逛逛"></div>
+			</div>
+			<!--/如果没有订单-->
+			<ul style="display:none">
+				<li>
+					<div class="show_info">
+						<h1>巴盟羔羊肋排1<span class="returnd">退货</span></h1>
+						<p>总计￥<span>680.0</span>/<span>6斤</span></p>
+						<p class="state">待发货</p>
+					</div>
+					<div class="show_img">
+						<img src="images/goods_img.png" alt="羊排">
+					</div>
+				</li>
+				<li>
+					<div class="show_info">
+						<h1>巴盟羔羊肋排<span class="returnd">退货中</span></h1>
+						<p>总计￥<span>680.0</span>/<span>6斤</span></p>
+						<p class="state">待发货</p>
+					</div>
+					<div class="show_img">
+						<img src="images/goods_img.png" alt="羊排">
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div id="already">
+			<ul>
+				<li>
+					<div class="show_info">
+						<h1>巴盟羔羊肋排2<span class="returnd">退货成功</span></h1>
+						<p>总计￥<span>680.0</span>/<span>6斤</span></p>
+						<p class="state">已发货</p>
+					</div>
+					<div class="show_img">
+						<img src="images/goods_img.png" alt="羊排">
+					</div>
+				</li>
+				<li>
+					<div class="show_info">
+						<h1>巴盟羔羊肋排<span class="returnd">退货中</span></h1>
+						<p>总计￥<span>680.0</span>/<span>6斤</span></p>
+						<p class="state">已发货</p>
+					</div>
+					<div class="show_img">
+						<img src="images/goods_img.png" alt="羊排">
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div id="finish">
+			<ul>
+				<li>
+					<div class="show_info">
+						<h1>巴盟羔羊肋排3<span class="returnd">退货</span></h1>
+						<p>总计￥<span>680.0</span>/<span>6斤</span></p>
+						<p class="state">已完成</p>
+					</div>
+					<div class="show_img">
+						<img src="images/goods_img.png" alt="羊排">
+					</div>
+				</li>
+				<li>
+					<div class="show_info">
+						<h1>巴盟羔羊肋排<span class="returnd">退货中</span></h1>
+						<p>总计￥<span>680.0</span>/<span>6斤</span></p>
+						<p class="state">已完成</p>
+					</div>
+					<div class="show_img">
+						<img src="images/goods_img.png" alt="羊排">
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="out_page" style="display:none">
+		<div id="returnd">
+			<p>请确认是否操作</p>
+			<div>
+				<span class="sure">确认</span>
+				<span class="close">否</span>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('.orderlist_tab div').click(function(){
+			$(this).addClass('active').siblings().removeClass('active').end();
+			var content='#'+$(this).attr('data-content');
+			$(content).addClass('active').siblings().removeClass('active');
+		})
+		$('.returnd').click(function(){
+			if($(this).text()=="退货"){
+				$('#out_page').show()
+			}
+			else{return}
+		})
+		$('.close').click(function(){
+			$('#out_page').hide()
+		})
+	})
+	</script>
+</body>
+</html>

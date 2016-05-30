@@ -1,0 +1,54 @@
+
+      body{
+		background: #e0e0e0;
+		font-size: 16px;
+		font-family: 'Microsoft YaHei','SimHei';
+	}
+	header{
+		color:#ff1771;
+		background: #fff;
+		padding:13px 15px;
+	}
+	.checkbox{
+		float:left;
+		background: url(../images/checkbox2.png) no-repeat;
+	}
+	#shequ_car,#youji_car{
+		background: #efefef;
+		margin-bottom: 10px
+	}
+	#shequ_car li,#youji_car li{
+		border-bottom: 1px solid #b8b8b8;
+		padding:8px 15px;
+		position: relative;
+	}
+	#shequ_car li > div,#youji_car li > div{
+		display: inline-block;
+		vertical-align: middle
+	}
+	.show_img{
+		width:28%;
+		margin-right: 3%
+	}
+	.show_img img{
+		border-radius: 5px
+	}
+	.produc_info{
+		vertical-align: top!important;
+	}
+	.col_gray.margin{
+		margin-left: 40px
+	}
+	.number_poduction{
+       position: absolute;
+       bottom:0;
+       right:10px;
+       text-align: center
+	}
+	.number_poduction > div{
+		display:inline-block;
+		vertical-align: middle
+	}
+	.reduce img,.plus img{
+		height:25px;
+	}

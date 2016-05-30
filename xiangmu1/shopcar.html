@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/car.css">
+	<link rel="stylesheet" href="css/radiocheckbox.css">
+</head>
+<body>
+
+	<header><input id="shequ" type="checkbox" ><label for="shequ">社区团 ></label></header>
+	<div id="shequ_car">
+		<ul>
+			<li>
+				<div>
+					<input  type="checkbox"  name="shequ" ><label >&nbsp;</label>
+				</div>
+				<div class="show_img">
+					<img src="images/goods_img.png" alt="羊排">
+				</div>
+				<div class="produc_info">
+					<h1>巴盟羔羊肋排</h1>
+					<p class="col_gray margin">￥68.00/斤</p>
+					<div class="number_poduction">
+						<div class="reduce">
+							<img src="images/reduce.png" alt="减">
+						</div>
+						<span class="goods_num">2</span>斤
+						<div class="plus">
+							<img src="images/plus.png" alt="加">
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div>
+					<input  type="checkbox"  name="shequ" ><label >&nbsp;</label>
+				</div>
+				<div class="show_img">
+					<img src="images/goods_img.png" alt="羊排">
+				</div>
+				<div class="produc_info">
+					<h1>巴盟羔羊肋排</h1>
+					<p class="col_gray margin">￥68.00/斤</p>
+					<div class="number_poduction">
+						<div class="reduce">
+							<img src="images/reduce.png" alt="减">
+						</div>
+						<span class="goods_num">4</span>斤
+						<div class="plus">
+							<img src="images/plus.png" alt="加">
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<header><input id="youji" type="checkbox"><label for="youji">邮&nbsp;&nbsp;&nbsp;寄 ></label></header>
+	<div id="youji_car">
+		<ul>
+			<li>
+				<div>
+					<input type="checkbox" name="youji" ><label >&nbsp;</label>
+				</div>
+				<div class="show_img">
+					<img src="images/goods_img.png" alt="羊排">
+				</div>
+				<div class="produc_info">
+					<h1>巴盟羔羊肋排</h1>
+					<p class="col_gray margin">￥68.00/斤</p>
+					<div class="number_poduction">
+						<div class="reduce">
+							<img src="images/reduce.png" alt="减">
+						</div>
+						<span class="goods_num">6</span>斤
+						<div class="plus">
+							<img src="images/plus.png" alt="加">
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div>
+					<input type="checkbox" name="youji" ><label >&nbsp;</label>
+				</div>
+				<div class="show_img">
+					<img src="images/goods_img.png" alt="羊排">
+				</div>
+				<div class="produc_info">
+					<h1>巴盟羔羊肋排</h1>
+					<p class="col_gray margin">￥68.00/斤</p>
+					<div class="number_poduction">
+						<div class="reduce">
+							<img src="images/reduce.png" alt="减">
+						</div>
+						<span class="goods_num">6</span>斤
+						<div class="plus">
+							<img src="images/plus.png" alt="加">
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<footer class="pay">
+		<ul id="footer_three">
+			<li style="width:25%">
+				<div class="icon_footer">
+					<img src="images/car.png" alt="购物车">
+				</div>
+				<span id="car_num">6</span>
+			</li>
+			<li style="width:50%" class="pay_money">总计：￥80.0元</li>
+			<li style="width:25%" id="bg_r_s">支付</li>
+		</ul>
+	</footer>
+	<script src="js/jquery-1.10.1.min.js"></script>
+	<!--<script type="text/javascript" src="js/custom-form-elements.min.js"></script>-->
+	<script type="text/javascript">
+	$(function(){
+		$('.reduce').on('click',function(){
+			var obj_mun=$(this).siblings('.goods_num');
+			var mun=parseInt($(obj_mun).html());
+			if(mun>0){
+				$(obj_mun).html(mun-1)
+			}
+			else{
+
+				return
+			}
+		})
+		$('.plus').on('click',function(){
+			var obj_mun=$(this).siblings('.goods_num');
+			var mun=parseInt($(obj_mun).html());
+			//if(mun<23){  //这里23为库存
+				$(obj_mun).html(mun+1)
+			//}
+			//else{
+			//	return
+			//}
+		})
+		//全选全不选社区
+		$("#shequ").on('click',function() {
+		    $('input[name="shequ"]').prop("checked",$(this).prop("checked"));
+        });
+        var $subBox = $("input[name='shequ']");
+        $subBox.click(function(){
+            $("#shequ").prop("checked",$subBox.length == $("input[name='shequ']:checked").length ? true : false);
+        });  
+		//全选全不选邮寄
+        $("#youji").on('click',function() {
+		    $('input[name="youji"]').prop("checked",$(this).prop("checked"));
+        });
+        var $subBox1 = $("input[name='youji']");
+        $subBox1.click(function(){
+            $("#youji").prop("checked",$subBox1.length == $("input[name='youji']:checked").length ? true : false);
+        });  
+	})
+
+	</script>
+</body>
+</html>

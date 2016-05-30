@@ -1,0 +1,32 @@
+input[type=checkbox],
+input[type=radio ]{
+  width   : 21px;
+  height  : 21px;
+  margin  : 0;
+  padding : 0;
+  opacity : 0;
+  filter: "alpha(opacity=0)"; /* IE 8 */
+}
+
+input[type=checkbox]+ label{
+  display      : inline-block;
+  margin-left  : -24px;
+  padding-left : 28px;
+  background   : url('../images/checkbox2.png') no-repeat  0 0;
+  opacity : 1;
+
+}
+input[type=checkbox]:hover + label{
+  background: url('../images/checkbox2.png') no-repeat 0 0; 
+ 
+}
+input[type=checkbox]:checked + label{
+  background: url('../images/checkbox2.png') no-repeat 0 -32px;
+ 
+}
+
+input[type=checkbox]:checked:hover + label{
+  background: url('../images/checkbox2.png') no-repeat 0 -32px;
+  
+}
+

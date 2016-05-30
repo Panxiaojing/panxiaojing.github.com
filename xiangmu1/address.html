@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>收货地址</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/form.css">
+	<link rel="stylesheet" href="css/idangerous.swiper.css">
+	<link rel="stylesheet" href="css/graderecord.css">
+	<style type="text/css">
+	body{
+		background:#efefef ;
+	}
+	</style>
+</head>
+<body>
+	<header><a href=""><img src="images/title_jiantou_left.png" alt="<">返回首页</a></header>
+	<div class="youji_address">
+		<div class="address_title">邮寄地址 ></div>
+		<ul>
+			<li>
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				      <div class="swiper-slide window-width">
+				      	<p>我的地址我的地址我的地址我的地址我的地址我的地址我的地
+				      	</p>
+				      </div>
+				      <div class="swiper-slide edit-slide" style="width:60px;">
+				        <p>编辑</p>
+				      </div>
+				     <div class="swiper-slide delete-slide" style="width:70px;">
+				        <p>删除</p>
+				      </div>
+				    </div>
+				</div>
+			</li>
+			<li>
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				      <div class="swiper-slide window-width">
+				      	<p>我的地址我的地址我的地址我的地址我的地址我的地址我的地
+				      	</p>
+				      </div>
+				      <div class="swiper-slide edit-slide" style="width:60px;">
+				        <p>编辑</p>
+				      </div>
+				     <div class="swiper-slide delete-slide" style="width:70px;">
+				        <p>删除</p>
+				      </div>
+				    </div>
+				</div>
+			</li>
+		</ul>
+		<p class="add_address">添加新地址 
+			<img src="images/title_jiantou_left.png" alt="展开">
+		</p>
+		<div id="add_adddiv" style="display:none">
+			<div>
+				<input type="checkbox" class="styled">
+				<p>设为默认地址</p>
+				<table width="100%">
+					<tr>
+						<td>收件人</td>
+						<td><input type="text" placeholder="输入收件人姓名"></td>
+					</tr>
+					<tr>
+						<td>联系电话</td>
+						<td><input type="text" placeholder="输入收件人电话"></td>
+					</tr>
+					<tr>
+						<td>省份</td>
+						<td>	
+							<select class="styled">
+								<option value="">北京市</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>市</td>
+						<td>	
+							<select class="styled">
+								<option value="">北京</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>区/县</td>
+						<td>	
+							<select class="styled">
+								<option value="">石景山区</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>详细地址</td>
+						<td>	
+							<input type="text" placeholder="输入详细地址" value="万达广场F座1901">
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<input style="margin-left:25px" type="button" value="保 存">
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="tuangou_address">
+		<div class="address_title">团购地址 ></div>
+		<ul>
+			<li>
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				      <div class="swiper-slide window-width">
+				      	<p>我的地址我的地址我的地址我的地址我的地址我的地址我的地
+				      	</p>
+				      </div>
+				      <div class="swiper-slide edit-slide" style="width:60px;">
+				        <p>编辑</p>
+				      </div>
+				     <div class="swiper-slide delete-slide" style="width:70px;">
+				        <p>删除</p>
+				      </div>
+				    </div>
+				</div>
+			</li>
+			<li>
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				      <div class="swiper-slide window-width">
+				      	<p>我的地址我的地址我的地址我的地址我的地址我的地址我的地
+				      	</p>
+				      </div>
+				      <div class="swiper-slide edit-slide" style="width:60px;">
+				        <p>编辑</p>
+				      </div>
+				     <div class="swiper-slide delete-slide" style="width:70px;">
+				        <p>删除</p>
+				      </div>
+				    </div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+
+	<script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/idangerous.swiper.min.js"></script>
+    <script type="text/javascript" src="js/custom-form-elements.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			  //显示删除按钮
+			  $('.window-width').width($(window).width()-50);
+			  $('.swiper-container').each(function(){
+			  		var mySwiper = new Swiper(this,{
+			     slidesPerView: 'auto'
+			  	})
+			  })
+			  //字数限制
+			  $('.window-width p').html(csubstr($('.window-width p').html(),15));
+			  //添加地址
+			  $('.add_address').click(function(){
+			  	$(this).toggleClass('active');
+			  	$('#add_adddiv').slideToggle('fast');
+			  })
+
+			  //点击删除按钮
+			  $('.delete-slide').click(function(){
+			  	$(this).parents('li').remove();
+			  	//后台删除数据库!!
+			  	//...
+			  })
+		})
+		function csubstr(str,len){
+		 if(str.length>10){
+		  return str.substring(0,len)+"...";
+		 }else{
+		  return str;
+		 }
+		}
+	</script>
+</body>
+</html>

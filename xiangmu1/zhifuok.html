@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>支付成功</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/graderecord.css">
+	<style type="text/css">
+		body{
+			background: #fafafa;
+		}
+	</style>
+</head>
+<body>
+	<header><a href=""><img src="images/title_jiantou_left.png" alt="<">返回首页</a></header>
+	<div class="pay_ok">
+		<div class="pay_ok_title"><img src="images/paysuccess_icon.png">支付成功</div>
+		<div id="progress_bar_bg">
+			<span class="mark" id="all_num">1000</span>
+			<div id="progress_bar">
+				<span class="mark" id="part_num">576</span>
+			</div>
+		</div>
+		<p class="bar_ps">本小区已成团金额</p>
+		<div class="erweima"><img src="images/erweima.png" alt="二维码"></div>
+		<p class="gay">长按二维码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;添加专属客服</p>
+		<p class="gay">加入交流群分享美食体验</p>
+	</div>
+
+	<script src="js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript">
+       $(function(){ 
+       	    //进度条
+       		var percent=$('#part_num').html()/$('#all_num').html()*100+'%';
+       		$('#progress_bar').animate({ width: percent }, 1000);
+       })
+	</script>
+</body>
+</html>

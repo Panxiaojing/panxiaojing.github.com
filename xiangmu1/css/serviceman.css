@@ -1,0 +1,46 @@
+	body {
+	  font-family: 'Microsoft YaHei','SimHei';
+		}	
+	.serviceman{
+			text-align: center;
+		}
+		p{
+			color:#A5A5A5;
+			line-height: 15px
+		}
+		img{
+			margin:50px 0 10px 0;
+			width:50%;
+		}
+		.serviceman .margin_p{
+			margin-top:50px;
+		}
+		
+	.shequ_add_address{
+			text-align: center;
+		}
+		.kefu_phone{
+			width:70%;
+			margin:20px auto 10px auto;
+			color:#A5A5A5;
+		}
+		.kefu_phone p{
+			font-size: 0.8em;
+			line-height: 11px
+		}
+		.kefu_phone div{
+			display:inline-block;
+			vertical-align: middle
+		}
+		.kefu_phone div:first-child,.kefu_phone div:last-child{
+			font-size: 4em;
+		}
+		p.col_b{
+			color:#000
+		}
+		p.b{
+			font-size: 1.1em
+		}
+		p.s{
+			font-size: 0.9em
+		}

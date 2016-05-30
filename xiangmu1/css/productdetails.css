@@ -1,0 +1,113 @@
+.header_img img{
+		width:100%;
+		height:auto;
+	}
+	.price_wk{
+		background-color: #ff0066;
+		height:45px;
+		color:#fff;
+		padding:0 0 0 15px;
+		width:100%;
+	}
+	.price_wk td{
+		height:100%;
+	}
+	.now_price{
+		font-size: 2em;
+		line-height: 40px
+	}
+	.original_price{
+		margin-left: 5%;
+		font-size:0.8em;
+		vertical-align: middle
+	}
+	.original_price span{
+		border-radius: 4px
+	}
+	.bg_r{
+		background:#990033;
+		padding:1px 2px;
+	}
+	.col_r{
+		color:#990033;
+	}
+	.time,.share{
+		text-align: center;
+		background:#a3c71f;
+	}
+	.time span{
+		margin-left: 2px;
+		border-radius: 2px
+	}
+	.share img{height:68%;width: auto}
+	.arrow_left{
+		border-color: transparent;
+		border-style: solid;
+		border-right-color:#a3c71f;
+	    border-width: 21px 11px 21px 0;
+	}
+	.productinfo{
+		margin-bottom: 50px
+	}
+	.productinfo > div{
+		padding:8px 5px 15px 15px;
+	}
+	.productinfo .product_name{
+		background-color: #efeeee;
+		padding-left:15px;
+	}
+    .productinfo .product_recommend{
+    	background-color: #e8d1da;
+       	font-size: 0.9em
+    }
+    .productinfo .product_recommend p:first-child{
+    	color:#ff3284;
+    	padding-bottom:5px;
+    	font-size:1.1em;
+    }
+    .productinfo .product_num{
+    	background:#efeeee ;
+    }
+    .productinfo .product_num div{
+    	display:inline-block;
+    	vertical-align: middle
+    }
+    .productinfo .product_num .mun_wk{
+    	border:1px solid #888;
+    	background: #fff;
+    }
+    .productinfo .product_num input{
+		width:30px;
+		height:25px;
+		text-align: center;
+		border:none;
+		font-size: 1em
+    }
+    #reduce,#plus{
+    	height:30px;
+    	width:30px;
+    	margin: 0 auto	
+    }
+    #reduce img,#plus img{
+    	height:100%;
+    	width:100%;
+    }
+    .productinfo .product_rule{
+    	font-size: 0.8em;
+    	-webkit-box-shadow:inset 0 -5px 5px rgba(0,0,0,0.3);  
+		-moz-box-shadow:inset 0 -5px 5px rgba(0,0,0,0.3); 
+		box-shadow:inset 0 -5px 5px rgba(0,0,0,0.3);
+    }
+    .productinfo .product_rule p:first-child{
+    	color:#ff3284;
+    	padding-bottom:5px;
+    	font-size:1.1em;
+    }
+    .productinfo .product_rule p:last-child{
+   		text-indent:2em;
+	}
+	footer{
+		-webkit-box-shadow:inset 0 0 10px rgba(255,50,132,0.5);  
+		-moz-box-shadow:inset 0 0 10px rgba(255,50,132,0.5);  
+		box-shadow:inset 0 0 10px rgba(255,50,132,0.5);
+	}

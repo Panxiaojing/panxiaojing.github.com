@@ -1,0 +1,168 @@
+﻿body{background: #f9f9f9;font-family: 'Microsoft YaHei','SimHei';}
+	header{
+		height:40px;
+		background: #e8e8e8;
+		line-height: 40px;
+		font-size: 1.2em;
+		padding-left: 15px;
+		-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.5);
+		-moz-box-shadow: 0 2px 2px rgba(0,0,0,0.5);
+		box-shadow: 0 2px 2px rgba(0,0,0,0.5);
+		margin-bottom: 4px;
+		color:#676767;
+	}
+	header img{
+		height:12px;
+		width:7px;
+		margin-left: 5px
+	}
+	.address,.order,.payway{
+		margin-bottom: 10px;
+		border:solid #ccc;
+		border-width:1px 0;
+		padding:0 15px;
+	}
+	.address{
+		padding:10px 15px;
+		color:#666;
+		background-color: #fff;
+	}
+	.address > div{
+		padding:5px 0;
+	}
+	.address input[type="text"]{
+		border:none;
+		font-size: 1em;
+	}
+	.address .shequ_addaddress{
+		text-align: right
+	}
+	.shequ_addaddress #add_btn{
+		color:#bbd76f;
+	}
+	.address .send_addaddress{
+		text-align: center
+	}
+	.send_addaddress #add_btn{
+		color:#676767;
+	}
+	.send_addaddress p{
+		margin-top: -5px;
+		font-size: 1.1em;
+		color:#ff1671;
+	}
+	
+
+	/*订单信息*/
+	.order{
+		padding:0;
+	}
+	.order_title{
+		background: #fff;
+		color:#666;
+		padding:8px 15px;
+		-webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+		-moz-box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+		box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+		margin-bottom: 4px
+	}
+	.col_gray{
+		color: #797979;
+		font-size: 0.9em;
+		margin-top: -3px
+	}
+	.icon{
+		height: 20px;
+		float:left;
+		margin-right: 5px; 
+	}
+	.order_icon img,.gps_icon img{
+		height:100%;
+		width:auto;
+	}
+	.number_poduction{
+		position: absolute;
+		font-size: 0.8em;
+		color:#000;
+		bottom:20px;
+		right:15px;
+	}
+	.order_info li{
+		position: relative;
+		padding:5px 15px;
+		border-bottom: 1px solid #e8ebed;
+		background: #f1f5f8;
+	}
+	.order_info .show_img img{
+		overflow: hidden;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
+	.order_info ul{
+		margin-bottom: 10px
+	}
+	.jifen_icon{
+	    height: 16px;
+	    width: 16px;
+	    display: inline-block;
+	    background: url(../images/jifen_icon.png);
+	    background-size: 100% 100%;
+	}
+	p.order_ps{
+		color:#9e9f9f;
+		font-size: 0.8em
+	}
+	.total > div{
+		border-bottom: 1px solid #dadada;
+		padding:10px 15px;
+		background: #fff;
+		color:#323232;
+	}
+	.total > div:last-child{
+		border:none;
+	}
+	.use_grade input{
+		float: right;
+	}
+	.use_grade p:last-child{
+		color:#a4a3a3;
+	}
+	.use_grade p:last-child span{
+		color:#ff1671;
+	}
+	.total span.money{
+		color:#ff1671;
+		float: right
+	}
+	/*payway*/
+	.payway_title{
+		background: #fff;
+		color:#666;
+		padding:8px 0;
+		margin-bottom: 4px
+	}
+	.payway{
+		background: #fff;
+		padding-bottom:8px;
+	}
+	.payway_ps{
+		color:#acabab;
+	}
+	.way {
+		margin:5px 0 5px 20px;
+	}
+	.yue{
+		color:#acabab;
+		margin-left: 15px
+	}
+	.way input{
+		float:right;
+		height:30px;
+	}
+	.way_icon,.way{
+		height:30px;
+		line-height: 30px;
+		color:#4d4d4d;
+	}
+	

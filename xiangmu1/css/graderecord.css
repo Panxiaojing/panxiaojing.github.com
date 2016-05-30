@@ -1,0 +1,409 @@
+*,h1,h4{margin:0;padding:0;}
+	ul{list-style:none;}
+	a{color:#000;text-decoration: none}
+	body {
+	  margin: 0;
+	  font-family: 'Microsoft YaHei','SimHei';
+	  font-size: 16px;
+	}
+	header{
+		padding: 15px 15px;
+		-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.2);  
+		-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.2); 
+		box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+		background: #fff
+	}
+	header img{
+		height:12px;
+		width:7px;
+		margin-right: 5px
+	}
+	.grade_rule{
+		padding: 15px;
+		-webkit-box-shadow:0 0 5px rgba(0,0,0,0.5);  
+		-moz-box-shadow: 0 0 5px rgba(0,0,0,0.5); 
+		box-shadow: 0 0 5px rgba(0,0,0,0.5);
+		background: #eee
+	}
+	.grade_rule .title{
+		color: #ff1771;
+		font-size: 1.1em;
+		text-align: center;
+	}
+	.content_rule{
+		width:70%;
+		margin:5px auto;
+		font-size: 0.9em
+	}
+	.record li{
+		padding:8px 20px;
+		border-bottom:1px solid #e6e6e6 ;
+		color: #30261d;
+		line-height: 30px
+	}
+	.record li p span{
+		font-size: 1.2em;
+		float:right;
+	}
+	.record .mark_time{
+		color:#9b9b9b;
+	}
+
+	/*订单列表*/
+	.orderlist_tab{
+		height:50px;
+	}
+	.orderlist_tab > div{
+		width: 33.33%;
+		text-align: center;
+		vertical-align: middle;
+		float:left;
+		font-size: 1.1em;
+		padding:11px 0;
+	}
+
+	.orderlist_tab > div.active{
+		color:#fff;
+		background: #ff1771
+	}
+
+	.orderlist_content > div{
+		display:none;
+	}
+	.orderlist_content > div.active{
+		display:block;
+	}
+	
+	.orderlist_content li{
+		position: relative;
+		padding:15px 15px;
+	}
+	.orderlist_content li{
+		padding-bottom:5px;
+		border-bottom:1px solid #dedede
+	}
+	.orderlist_content .show_info{
+		width:66%;
+	}
+	.orderlist_content .show_info h1{
+		font-weight: 500
+	}
+	.orderlist_content .show_info p{
+		color:#999;
+		margin-left: 30px;
+		font-size: 0.9em
+	}
+	.orderlist_content .show_img {
+	    height: auto;
+	    width: 30%;
+	    margin-right: 6%;
+	}
+	.orderlist_content .show_info span.returnd{
+		color:#a3ca3c;
+		font-size: 0.9em;
+		font-weight: bolder;
+		float:right;
+	}
+	.orderlist_content img{
+		-webkit-border-radius: 5px;
+		-moz-border-radius:5px;
+		border-radius: 5px;
+		margin-bottom: 10px
+	}
+	p.state{
+		position: absolute;
+		bottom:15px;
+		right:15px;
+		font-size: 1.3em;
+		color: #ff1771!important;
+	}
+	#none_order{
+			text-align: center;
+	}
+	#none_order img{
+		height:70px;
+		width: auto;
+		margin-top:30px;
+	}
+	#none_order p{
+		color: #c7c7c7;
+		font-size: 1.1em
+	}
+	#none_order input[type="button"]{
+		border:1px solid #000;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+		padding:3px 8px;
+		color:#000;
+		background-color: #fff
+	}
+	#none_order > div{
+		margin:15px auto;
+	}
+
+
+	#out_page{
+		position: fixed;
+		height: 100%;
+		width:100%;
+		top:0;
+		left:0;
+		background: url(../images/bg_tishi.png);
+	}
+	#returnd{
+		width:70%;
+		margin:60% auto 0 auto;
+		padding-top:15px;
+		overflow: hidden;
+		background: #fff;
+		text-align: center;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+	}
+	#returnd span{
+		display:block;
+		width:50%;
+		background: #9b9b9b;
+		color:#fff;
+		float:left;
+		margin-top:15px;
+		padding:5px 0;
+	}
+	#returnd span:first-child{
+		border-right: 1px solid #fff;
+		-moz-box-sizing: border-box;  
+    	-webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-border-bottom-left-radius: 5px;
+		-moz-border-bottom-left-radius: 5px;
+		border-bottom-left-radius: 5px
+	}
+	#returnd span:last-child{
+		-webkit-border-bottom-right-radius: 5px;
+		-moz-border-bottom-right-radius: 5px;
+		border-bottom-right-radius: 5px
+	}
+
+
+	/*地址管理*/
+	.address_title{
+		padding: 13px 15px;
+		color:#ff1771;
+		background: #fff;
+		margin-top: 1px
+	}
+	.swiper-container {
+	  width:100%;
+	  height: 50px;
+	  color:#000; 
+	}
+	.swiper-slide{
+		height:100%;
+		line-height: 50px
+	}
+	.delete-slide {
+	  background: #ff277a;
+	  color:#fff;
+	  text-align: center;
+	}
+	.edit-slide{
+	  color:#ff277a;
+	  text-align: center;
+	}
+	.swiper-slide.window-width p{
+		margin-left: 20px
+	}
+	.checkbox{
+		width: 19px;
+		height: 25px;
+		padding: 0 5px 0 0;
+		background: url(../images/checkbox2.png) no-repeat;
+		display: block;
+		clear: both;
+		float: left;
+	}
+	.youji_address li,.tuangou_address li{
+		-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.2);  
+		-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.2); 
+		box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+		margin-top: 1px
+	}
+	.add_address{
+		padding:8px 15px;
+		background:#dcdcdc ;
+	}
+	#add_adddiv{
+		padding:15px;
+		color:#616161;
+	}
+	.add_address img{
+		float:right;
+		height:12px;
+		width:7px;
+		margin-top: 2px;
+		-moz-transform:rotate(-90deg);
+      	-webkit-transform:rotate(-90deg);
+      	transform:rotate(-90deg);
+        filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	}
+	.add_address.active img{
+		-moz-transform:rotate(90deg);
+      	-webkit-transform:rotate(90deg);
+      	transform:rotate(90deg);
+        filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+	}
+	#add_adddiv tr>td:first-child{
+		text-align: right;
+		padding:5px;
+	}
+	input[type="text"]{
+		background: #fff;
+		border:none;
+		border-radius:5px;
+		padding:5px;
+		font-size:1em;
+	}
+	.select {
+		position: absolute;
+		width: 48px; /* With the padding included, the width is 190 pixels: the actual width of the image. */
+		height: 21px;
+		line-height: 21px;
+		padding: 0 24px 0 8px;
+		color: #fff;
+		font: 1em arial,sans-serif;
+		border-radius:5px;
+		background:#fff;
+		border:none;
+		color:#616161;
+		text-align: center;
+		overflow: hidden;
+	}
+	.select:after{
+		content: "";
+		position: absolute;
+		height:6px;
+		width:11px;
+		right:5px;
+		top:7px;
+		background: url(../images/select_jiantou2.png);
+		background-size: 100% 100%
+	}
+
+	/*预付卡*/
+	.card_num{
+			padding:10px;
+			text-align: center
+		}
+		.card_num input[type="text"]{
+			border:1px solid #626262;
+			padding:8px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			width:100%;
+			margin-bottom:10px;
+			-moz-box-sizing: border-box;  
+	    	-webkit-box-sizing: border-box;
+	        -o-box-sizing: border-box;
+	        -ms-box-sizing: border-box;
+	        box-sizing: border-box;
+		}
+		.card_num p{
+			font-size: 0.8em;
+			color:#c1c1c1;
+			text-align: left;
+		}
+		.card_num input[type="button"]{
+			margin:10px 0;
+			background: #ff1771;
+			padding:5px 10px;
+			color:#fff;
+			font-size: 1.2em;
+			-webkit-border-radius: 8px;
+			-moz-border-radius: 8px;
+			border-radius: 8px;
+			border:none;
+		}
+		.card_num table{
+			font-size:1em;
+			margin-top:1px;
+		}
+		.card_num table td,.card_num table th{
+			text-align: left;
+			padding:10px 0;
+			font-weight: inherit;
+		}
+		.card_num table tr > td:nth-child(2),.card_num table tr > td:nth-child(3){
+			color:#ff1771;
+		}
+		.card_num table th{
+			color:#767475!important;
+		}
+		.balance{
+			text-align: center;
+			padding:5px;
+			background: #e5e5e5;
+			-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+			-moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+			box-shadow: 0 1px 1px rgba(0,0,0,0.3);	
+		}
+		.balance span{
+			color:#ff1771;
+		}
+
+		/*支付成功*/
+		.pay_ok{
+	    	text-align: center
+	    }
+		.pay_ok_title{
+			font-size: 1.6em;
+		    color:#ff1371;
+		    margin-top:40px;
+		    margin-bottom:25px;
+		}
+		.pay_ok_title img{
+			height:30px;
+			vertical-align: top;
+			margin-right: 5px
+		}
+		#progress_bar_bg,#progress_bar{
+			height:20px;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px;
+		}
+		#progress_bar_bg{
+			position: relative;
+			width:80%;
+			margin:0 auto;
+			background:#e9f1f4;
+			border-radius: 
+		}
+		#progress_bar{
+			position: absolute;
+			background: #ff3366;
+		}
+		.mark{
+			position: absolute;
+			color:#999;
+			right:-10px;
+			bottom:-15px;
+			font-size:0.8em;
+		}
+		.bar_ps{
+			font-size: 0.8em;
+			margin:30px auto 10px auto;
+			color:#ff1771;
+		}
+		.pay_ok .erweima img{
+			width:50%;
+		}
+		p.gay{
+			color:#8f8f8f;
+			font-size: 0.8em
+		}
+		

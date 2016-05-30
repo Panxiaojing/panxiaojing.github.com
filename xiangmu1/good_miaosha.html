@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>产品详情页--社区团秒杀</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/productdetails.css">
+	
+</head>
+<body>
+	<div class="header_img">
+		<img src="images/header_img_show.png">
+	</div>
+	<table class="price_wk" cellspacing="0" cellpadding="0">
+		<tr>
+			<td class="now_price">￥80.00</td>
+			<td class="original_price"><span class="line-through">￥100.00</span><br><span class="bg_r">54斤已售</span></td>
+			<td class="arrow_left"></td>
+			<td class="time" id="timer">
+				距结束仅剩<br><span class="bg_r">00</span><span class="bg_r">00</span><span class="col_r">:</span><span class="bg_r">00</span><span class="bg_r">00</span>
+			</td>
+		</tr>
+	</table>
+	<div class="productinfo">
+		<h1 class="product_name">巴盟羔羊肉排</h1>
+		<div class="product_recommend">
+			<p>试吃员推荐理由：</p>
+			<p>这里是试吃员推荐理由的地方。巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉</p>
+		</div>
+		<div class="product_num">
+			<table width="100%">
+				<tr>
+					<td>我是写商品性质的地方我是写商品性质的地方</td>
+					<td width="120">
+						<div id="reduce">
+							<img src="images/reduce.png" alt="减">
+						</div>
+						<div class="mun_wk">
+							<input id="prod_number" type="text" value="2">斤
+						</div>
+						<div id="plus">
+							<img src="images/plus.png" alt="减">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="product_rule">
+			<p>社区团购规则：</p>
+			<p>同一地址，六环内每次混团购买满1000元即成团；六环外每次混团购买满2000元即成团。成团后客服在该地址团购群里商量配送时间与地点，以及该团的截止团购时间，尽快配送。</p>
+		</div>
+	</div>
+	<footer>
+		<ul id="footer_four">
+			<li>
+				<a href="kefu.html">
+				<div class="icon_footer">
+					<img src="images/phone.png" alt="客服">
+				</div>
+				<p>客&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;服</p>
+				</a>
+			</li>
+			<li>
+				<a href="shopcar.html">
+				<div class="icon_footer">
+					<img src="images/car.png" alt="购物车">
+				</div>
+				<p>购物车</p>
+				<span id="user_num"></span>
+				</a>
+			</li>
+			<li id="bg_r_s">加入购物车</li>
+			<li id="bg_r_b"><a href="queren.html" style="color:#fff">立即购买</a></li>
+		</ul>
+	</footer>
+
+	 <script src="js/jquery-1.10.1.min.js"></script>
+	 <script src="js/productnum.js"></script>
+	 <script type="text/javascript">
+
+	 $(function(){
+	 	setInterval("timer()",1000);  
+	 })
+	 </script>
+</body>
+</html>
