@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>充电</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/power.css">
+</head>
+<body>
+	<div class="power_wk">
+		<p class="nowtime">12:45:45</p>
+		<p class="datetime">开始时间：12:54:44</p>
+		<!--<p class="weather">天气：晴</p>-->
+
+		<div class="power_main_wk">
+			<img src="web_images/fangge.png" alt="">
+			<div class="power_middlewk">
+				<div class="power_neiewk">
+					<div id="charging">
+						<img class="img1_bg" src="web_images/charging_bg.png" alt="">
+						<img class="img2_bg" src="web_images/charging_bg.png" alt="">
+						<div class="paopao pao1"></div>
+						<div class="paopao pao2"></div>
+						<div class="paopao pao3"></div>
+						<div class="paopao pao4"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p class="state">充电中……</p>	
+		<a id="stopcharge" href="javascript:void(0)">停止充电</a>
+	
+	</div>
+	<script type="text/javascript" src="js/jquery2.1.4.min.js"></script>
+	<script type="text/javascript">
+		var m=0,h=0,s=0,ss=1;  
+		setInterval("second()",1)
+		function second(){  
+			if((ss%100)==0){s+=1;ss=1;}  
+			if(s>0 && (s%60)==0){m+=1;s=0;}  
+			if(m>0 && (m%60)==0){h+=1;m=0;}  
+			t=(h<10 ? "0"+ h : h)+":"+(m<10 ? "0" + m : m)+":"+(s<10 ? "0" +s : s);  //时分秒运算
+			$(".nowtime").text(t);   //
+			ss+=1;  
+		}  
+	</script>
+</body>
+</html>

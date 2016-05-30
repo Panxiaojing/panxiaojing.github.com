@@ -1,0 +1,466 @@
+*{
+		margin:0;
+		padding:0;
+	}
+	body{
+		font-family: '微软雅黑','黑体';
+	}
+	.power_wk{
+		position: fixed;
+		top:0;
+		left:0;
+		height:100%;
+		width:100%;
+		FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#98b7f2,endColorStr=#456ce8); /*IE 6 7 8*/ 
+        background: -ms-linear-gradient(top, #98b7f2,#456ce8);  /* IE 10 */
+        background:-moz-linear-gradient(top,#98b7f2,#456ce8);/*火狐*/ 
+        background:-webkit-linear-gradient(top,#98b7f2,#456ce8);/*谷歌*/ 
+        background: -o-linear-gradient(top, #98b7f2,#456ce8);  /*Opera 11.10+*/
+	}
+	.nowtime,.datetime,.weather{
+		color:#fff;
+		text-align: center;
+	}
+	.nowtime{
+		font-size: 4em;
+		font-weight:bolder;
+		margin-top:5%;
+	}
+	.datetime,.weather{
+		font-size: 1em
+	}
+	.power_main_wk{
+		position: relative;
+		width: 75%;
+		margin: 6% auto 10px auto;
+		border: 1px solid #50ddd1;
+		border-radius: 50%;
+		box-shadow: 0 0 10px rgba(0,0,0,.5)
+	}
+	.power_main_wk img{
+		width: 100%;
+		height: auto;
+	}
+	.power_middlewk,.power_neiewk{
+		position: absolute;
+		top:2%;
+		left: 2%;
+		height:96%;
+		width: 96%;
+		background: transparent;
+		border: 3px solid #fff;
+		box-sizing:border-box;
+		border-radius: 50%;
+		box-shadow: 0 0 10px rgba(0,0,0,.5)	
+	}
+	.power_neiewk{
+		background: #fff;
+		border: none;
+		box-shadow:inset 3px 3px 15px rgba(0,0,0,.5);
+		overflow: hidden	
+	}
+	.state{
+		text-align: center;
+		font-size: .8em;
+		color:#fff;
+	}
+	a#startcharge,a#stopcharge{ 
+		width: 75%;
+		margin:5% auto;
+		display:block;
+		color:#fff;
+		text-decoration: none;
+		padding:10px 0;
+		font-size: 1.2em;
+		text-align: center;
+		border-radius: 30px;
+		
+	}
+	a#startcharge{
+		FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#9fe83a,endColorStr=#62b128); /*IE 6 7 8*/ 
+        background: -ms-linear-gradient(top, #9fe83a,#62b128);  /* IE 10 */
+        background:-moz-linear-gradient(top,#9fe83a,#62b128);/*火狐*/ 
+        background:-webkit-linear-gradient(top,#9fe83a,#62b128);/*谷歌*/ 
+        background: -o-linear-gradient(top, #9fe83a,#62b128);  /*Opera 11.10+*/
+    }
+    a#stopcharge{ 
+		FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#e8733b,endColorStr=#b22828); /*IE 6 7 8*/ 
+        background: -ms-linear-gradient(top, #e8733b,#b22828);  /* IE 10 */
+        background:-moz-linear-gradient(top,#e8733b,#b22828);/*火狐*/ 
+        background:-webkit-linear-gradient(top,#e8733b,#b22828);/*谷歌*/ 
+        background: -o-linear-gradient(top, #e8733b,#b22828);  /*Opera 11.10+*/
+	}
+	.red{
+		color:red;
+	}
+	.nostart{
+		background:#b0b0b0!important 
+	}
+	#beforecharge{
+		position: relative;
+		width: 60%;
+		margin:20% auto;
+		animation:power 2s linear infinite;
+		-o-animation:power 2s linear infinite;
+		-moz-animation:power 2s linear infinite;
+		-webkit-animation:power 2s linear infinite;
+	}
+	#beforecharge img{
+		width: 100%;
+		height: auto
+	}
+	
+	@keyframes power
+	{
+		from {opacity: 0}
+		to {opacity: 1}
+	}
+	@-webkit-keyframes power /*Safari and Chrome*/
+	{
+		from {opacity: 0}
+		to {opacity: 1}
+	}
+	@-moz-keyframes power /*Safari and Chrome*/
+	{
+		from {opacity: 0}
+		to {opacity: 1}
+	}
+	@-o-keyframes power /*Safari and Chrome*/
+	{
+		from {opacity: 0}
+		to {opacity: 1}
+	}
+	#charging{
+		position: relative;
+		width: 100%;
+		height:100%;
+		border-radius:100% ;
+		overflow: hidden;
+		box-shadow: 3px 3px 5px rgba(0,0,0,.8);
+	}
+	#charging img.img1_bg{
+		position: absolute;
+		bottom:0;
+		left: 0;
+		width: 200%;
+		height: auto;
+		animation:lang 3.6s linear infinite;
+		-o-animation:lang 3.6s linear infinite;
+		-moz-animation:lang 3.6s linear infinite;
+		-webkit-animation:lang 3.6s linear infinite;
+	}
+	#charging img.img2_bg{
+		position: absolute;
+		bottom:0;
+		left: 0;
+		width: 200%;
+		height: auto;
+		animation:lang 2.3s linear infinite;
+		-o-animation:lang 2.3s linear infinite;
+		-moz-animation:lang 2.3s linear infinite;
+		-webkit-animation:lang 2.3s linear infinite;
+		animation-delay:0.8s;
+		-webkit-animation-delay:0.8s
+		-moz-animation-delay:0.8s
+		-o-animation-delay:0.8s
+	}
+	#stopcharge:hover{
+		FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#da5c20,endColorStr=#a81c1b); /*IE 6 7 8*/ 
+        background: -ms-linear-gradient(top, #da5c20,#a81c1b);  /* IE 10 */
+        background:-moz-linear-gradient(top,#da5c20,#a81c1b);/*火狐*/ 
+        background:-webkit-linear-gradient(top,#da5c20,#a81c1b);/*谷歌*/ 
+        background: -o-linear-gradient(top, #da5c20,#a81c1b);  /*Opera 11.10+*/
+
+	}
+	@keyframes lang
+	{
+		from {margin-left: -100%}
+		to {margin-left:0%}
+	}
+	@-webkit-keyframes lang /*Safari and Chrome*/
+	{
+		from {margin-left: -100%}
+		to {margin-left:0%}
+	}
+	@-moz-keyframes lang /*Safari and Chrome*/
+	{
+		from {margin-left: -100%}
+		to {margin-left:0%}
+	}
+	@-o-keyframes lang /*Safari and Chrome*/
+	{
+		from {margin-left: -100%}
+		to {margin-left:0%}
+	}
+	.paopao{
+		position: absolute;
+		height:12px;
+		width:12px;
+		bottom:2px;
+		left:50%;
+		margin-left: -6px;
+		border-radius: 50%;
+		overflow: hidden;
+		FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#9fe93b,endColorStr=#6dc030); /*IE 6 7 8*/ 
+        background: -ms-linear-gradient(top, #9fe93b,#6dc030);  /* IE 10 */
+        background:-moz-linear-gradient(top,#9fe93b,#6dc030);/*火狐*/ 
+        background:-webkit-linear-gradient(top,#9fe93b,#6dc030);/*谷歌*/ 
+        background: -o-linear-gradient(top, #9fe93b,#6dc030);  /*Opera 11.10+*/
+	}
+	.pao1{
+		animation:pao1 1s linear infinite;
+		-o-animation:pao1 1s linear infinite;
+		-moz-animation:pao1 1s linear infinite;
+		-webkit-animation:pao1 1s linear infinite;
+	}
+	.pao2{
+		animation:pao2 1s linear infinite;
+		-o-animation:pao2 1s linear infinite;
+		-moz-animation:pao2 1s linear infinite;
+		-webkit-animation:pao2 1s linear infinite;
+	}
+	.pao3{
+		animation:pao3 1s linear infinite;
+		-o-animation:pao3 1s linear infinite;
+		-moz-animation:pao3 1s linear infinite;
+		-webkit-animation:pao3 1s linear infinite;
+		
+	}
+	.pao4{
+		animation:pao4 1s linear infinite;
+		-o-animation:pao4 1s linear infinite;
+		-moz-animation:pao4 1s linear infinite;
+		-webkit-animation:pao4 1s linear infinite;
+		animation-delay:1s;
+		-webkit-animation-delay:1s
+		-moz-animation-delay:1s
+		-o-animation-delay:1s	
+	}
+	@keyframes pao1
+	{
+		from {
+			
+			bottom:2px;
+			left:50%;
+			transform:scale(1);
+		}
+		to {
+			
+			bottom:11%;
+			left:53%;
+			transform:scale(1.5);
+		}
+	}
+	@-webkit-keyframes pao1 /*Safari and Chrome*/
+	{
+		from {
+			
+			bottom:2px;
+			left:50%;
+			-webkit-transform:scale(1);
+		}
+		to {
+			
+			bottom:11%;
+			left:53%;
+			-webkit-transform:scale(1.5);
+		}
+	}
+	@-moz-keyframes pao1 /*Safari and Chrome*/
+	{
+		from {
+			
+			bottom:2px;
+			left:50%;
+			-moz-transform:scale(1);
+		}
+		to {
+			
+			bottom:11%;
+			left:53%;
+			-moz-transform:scale(1.5);
+		}
+	}
+	@-o-keyframes pao1 /*Safari and Chrome*/
+	{
+		from {
+			
+			bottom:2px;
+			left:50%;
+			-o-transform:scale(1);
+		}
+		to {
+		
+			bottom:11%;
+			left:53%;
+			-o-transform:scale(1.5);
+		}
+	}
+
+
+
+
+	@keyframes pao2
+	{
+		from {	
+			bottom:11%;
+			left:53%;
+			transform:scale(1.5);
+		}
+		to {
+			bottom:25%;
+			left:62%;
+			transform:scale(2);
+		}
+	}
+	@-webkit-keyframes pao2 /*Safari and Chrome*/
+	{
+		from {	
+			bottom:11%;
+			left:53%;
+			-webkit-transform:scale(1.5);
+		}
+		to {
+			bottom:25%;
+			left:62%;
+			-webkit-transform:scale(2);
+		}
+	}
+	@-moz-keyframes pao2 /*Safari and Chrome*/
+	{
+		from {	
+			bottom:11%;
+			left:53%;
+			-moz-transform:scale(1.5);
+		}
+		to {
+			bottom:25%;
+			left:62%;
+			-moz-transform:scale(2);
+		}
+	}
+	@-o-keyframes pao2 /*Safari and Chrome*/
+	{
+		from {	
+			bottom:11%;
+			left:53%;
+			-o-transform:scale(1.5);
+		}
+		to {
+			bottom:25%;
+			left:62%;
+			-o-transform:scale(2);
+		}
+	}
+
+
+	@keyframes pao3
+	{
+		from {	
+			bottom:25%;
+			left:62%;
+			transform:scale(2);
+		}
+		to {
+			
+			bottom:45%;
+			left:60%;
+			transform:scale(3);
+		}
+	}
+	@-webkit-keyframes pao3 /*Safari and Chrome*/
+	{
+		from {	
+			bottom:25%;
+			left:62%;
+			-webkit-transform:scale(2);
+		}
+		to {
+			
+			bottom:45%;
+			left:60%;
+			-webkit-transform:scale(3);
+		}
+	}
+	@-moz-keyframes pao3 /*Safari and Chrome*/
+	{
+		from {	
+			bottom:25%;
+			left:62%;
+			-moz-transform:scale(2);
+		}
+		to {
+			
+			bottom:45%;
+			left:60%;
+			-moz-transform:scale(3);
+		}
+	}
+	@-o-keyframes pao3 /*Safari and Chrome*/
+	{
+		from {	
+			bottom:25%;
+			left:62%;
+			-o-transform:scale(2);
+		}
+		to {
+			
+			bottom:45%;
+			left:60%;
+			-o-transform:scale(3);
+		}
+	}
+
+
+	@keyframes pao4
+	{
+		from {	
+			opacity: 0;
+			height: 0;
+			width: 0
+		}
+		to {
+			opacity: 1;
+			height: 12px;
+			width: 12px
+		}
+	}
+	@-webkit-keyframes pao4 /*Safari and Chrome*/
+	{
+		from {	
+			opacity: 0;
+			height: 0;
+			width: 0
+		}
+		to {
+			opacity: 1;
+			height: 12px;
+			width: 12px
+		}
+	}
+	@-moz-keyframes pao4 /*Safari and Chrome*/
+	{
+		from {	
+			opacity: 0;
+			height: 0;
+			width: 0
+		}
+		to {
+			opacity: 1;
+			height: 12px;
+			width: 12px
+		}
+	}
+	@-o-keyframes pao4 /*Safari and Chrome*/
+	{
+		from {	
+			opacity: 0;
+			height: 0;
+			width: 0
+		}
+		to {
+			opacity: 1;
+			height: 12px;
+			width: 12px
+		}
+	}
